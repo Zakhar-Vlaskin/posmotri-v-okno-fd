@@ -74,7 +74,6 @@ ol {
 
 /*Контейнер для видео*/
 .result__video-container {
-  position: relative;
   width: 711px;
   min-height: 386px;
   margin-bottom: 16px;
@@ -83,7 +82,6 @@ ol {
 /*Видео*/
 .result__video {
   object-fit: cover;
-  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -93,7 +91,7 @@ ol {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
 }
 
 fieldset {
@@ -105,13 +103,14 @@ fieldset {
 
 /*Элементы внури формы*/
 .search-form__fieldset:nth-child(1) {
-  flex: 1;
+  flex-grow: 1;
+  min-width: 225px;
 }
 
 .search-form__fieldset:nth-child(2) {
-  flex: 0;
+  flex-grow: 1;
+  min-width: 212px;
 }
-
 
 /*Строка для чекбоксов*/
 .search-form__checkbox-list {
@@ -121,14 +120,15 @@ fieldset {
 
 .search-form__label {
   display: flex;
-  width: fit-content;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   cursor: pointer;
 }
 
 /*Текстовый input*/
 .search-form__textfield {
+  width: 100%;
   appearance: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -198,7 +198,7 @@ fieldset {
 
 /*текст рядом с чекбоксом*/
 .search-form__label-text {
-  width: 400;
+  font-weight: 400;
   line-height: 21.6px;
   letter-spacing: 0;
 }
@@ -230,6 +230,7 @@ fieldset {
   color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 
 .search-form__submit-button {
@@ -293,8 +294,6 @@ fieldset {
   display: flex;
   align-items: start;
   gap: 30px;
-  padding-left: 3px;
-  padding-right: 3px;
 }
 
 /*Картинка в карточке*/
@@ -324,13 +323,14 @@ fieldset {
   white-space: nowrap;
   text-overflow: ellipsis;
   flex: 1;
+  text-transform: uppercase;
 }
 
 /*Ссылки в карточках*/
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
-
 }
 
 /*Описание карточки*/
@@ -341,27 +341,36 @@ fieldset {
   flex: 1;
   font-weight: 400;
   font-size: 18px;
-  font-family: 'Fire Sans Condensed' sans-serif;
+  font-family: 'Fire Sans Condensed', sans-serif;
   line-height: 16.2px;
   letter-spacing: 0;
+  font-weight: 400;
 }
 
-/*Активная карточка*/
-.content__card-link_current:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:hover {
+/*Активная карточка*/
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible{
+.content__card-link:focus-visible{
   outline: 1px solid #fff;
   padding-left: 3px;
   padding-right: 3px;
+}
+
+.content__list-item {
+  padding: 0 3px;
 }
