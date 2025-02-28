@@ -74,17 +74,21 @@ ol {
 
 /*Контейнер для видео*/
 .result__video-container {
-  width: 711px;
+  min-width: 711px;
   min-height: 386px;
   margin-bottom: 16px;
   position: relative;
+  overflow: hidden;
 }
 
 /*Видео*/
 .result__video {
+  position: absolute;
   object-fit: cover;
   height: 100%;
   width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 /*Форма*/
