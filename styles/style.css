@@ -77,6 +77,7 @@ ol {
   width: 711px;
   min-height: 386px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 /*Видео*/
@@ -280,6 +281,7 @@ fieldset {
 .content__list-container {
   height: 298px;
   overflow-y: scroll;
+  position: relative;
 }
 
 .content__list {
@@ -366,8 +368,6 @@ fieldset {
 
 .content__card-link:focus-visible{
   outline: 1px solid #fff;
-  padding-left: 3px;
-  padding-right: 3px;
 }
 
 .content__list-item {
