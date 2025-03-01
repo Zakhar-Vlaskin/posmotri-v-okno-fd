@@ -74,16 +74,14 @@ ol {
 
 /*Контейнер для видео*/
 .result__video-container {
-  min-width: 711px;
-  min-height: 386px;
   margin-bottom: 16px;
   position: relative;
-  overflow: hidden;
+  block-size: 386px;
+  inline-size: 711px;
 }
 
 /*Видео*/
 .result__video {
-  position: absolute;
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -138,12 +136,13 @@ fieldset {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-right: none;
+  border-left: none;
   font-size: inherit;
   font-weight: 400;
   line-height: 21.6px;
   background-color: transparent;
   font-family: inherit;
-  color: rgb(255 255 255/0.7);
+  color: #fff;
   letter-spacing: 0;
   padding: 1px 0;
   margin: 1px;
@@ -265,6 +264,7 @@ fieldset {
 
 .button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 /*заголовок посмотри в окно*/
@@ -284,7 +284,7 @@ fieldset {
 /*Контейнер для карточек*/
 .content__list-container {
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -340,16 +340,17 @@ fieldset {
 
 /*Описание карточки*/
 .content__video-card-description {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   flex: 1;
-  font-weight: 400;
   font-size: 18px;
-  font-family: 'Fire Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   line-height: 16.2px;
   letter-spacing: 0;
   font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .content__card-link:active {
