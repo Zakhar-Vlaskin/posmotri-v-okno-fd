@@ -296,14 +296,14 @@ fieldset {
 .content__video-card {
   display: flex;
   align-items: start;
-  gap: 30px;
 }
 
 /*Картинка в карточке*/
 .content__video-card-thumbnail {
-  width: 194px;
   object-fit: cover;
   object-position: center;
+  inline-size: 194px;
+  block-size: 103px;
 }
 
 /*Контейнер описание*/
