@@ -150,6 +150,7 @@ ol {
 }
 
 .content__video-card-title {
+  text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
